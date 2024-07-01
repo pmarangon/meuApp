@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'projects_screen.dart
+';
 
 void main() {
   runApp(MyApp());
@@ -8,12 +10,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Nome do seu App', // Substitua por um nome real
+      title: 'Paula VersaTech', // Substitua por um nome real
       theme: ThemeData(
         primarySwatch: Colors.blue, // Cor tema principal
       ),
       home: MyHomePage(), // Substitua por sua tela inicial
     );
+    routes: <String, Widget>{
+  '/': MyHomePage(), // Tela inicial
+  '/projects': ProjectsScreen(), // Tela de projetos
+},
+
   }
 }
 
@@ -27,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tela Inicial'), // Substitua por um título real
+        title: Text('Paula VersaTech'), // Substitua por um título real
       ),
       body: Center(
   child: Column(
