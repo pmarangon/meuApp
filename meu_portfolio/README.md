@@ -1,16 +1,14 @@
-# meu_portfolio
+Bem-vindo ao PaulaVersaTech, meu portfólio desenvolvido com Flutter, um framework poderoso para criação de aplicativos multiplataforma. Este projeto foi desenvolvido como parte da disciplina de Programação para Dispositivos Móveis II na Fatec Araras, onde aprendi a utilizar Dart e Flutter.
 
-A new Flutter project.
+Sobre o Projeto
+PaulaVersaTech é um portfólio digital que apresenta minhas habilidades e experiências nas áreas de publicidade e desenvolvimento de software. O objetivo principal deste projeto é demonstrar a fusão de criatividade e tecnologia na criação de soluções inovadoras e eficientes.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Funcionalidades
+Apresentação Pessoal: Uma seção "Sobre Mim" detalhada que fornece uma visão geral das minhas competências e interesses.
+Projetos: Exibição de projetos anteriores com descrições e tecnologias utilizadas.
+Contato: Formulário de contato integrado para facilitar a comunicação.
+Tecnologias Utilizadas
+Flutter: Utilizado para o desenvolvimento de toda a interface e funcionalidades do app, permitindo a criação de um aplicativo multiplataforma com alta performance.
+Dart: Linguagem de programação escolhida para escrever o código do app, aprendida durante as aulas de Programação para Dispositivos Móveis II na Fatec Araras.
+Aprendizado e Desenvolvimento
+Durante o desenvolvimento deste projeto, pude aprofundar meus conhecimentos em Flutter e Dart, aplicando conceitos ensinados em aula para criar um aplicativo funcional e bem estruturado. Este projeto não apenas reforçou minhas habilidades técnicas, mas também demonstrou a importância da resiliência e do aprendizado contínuo no campo da tecnologia.
