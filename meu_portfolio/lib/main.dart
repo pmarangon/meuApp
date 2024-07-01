@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'projects_screen.dart
-';
+import 'package:url_launcher/url_launcher.dart'; // Import for launching URLs
+import 'projects_screen.dart';
+import 'about_me_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,17 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Paula VersaTech', // Substitua por um nome real
+      title: 'Paula VersaTech', // Substituted with a real name
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Cor tema principal
+        primarySwatch: Colors.blue, // Main theme color
       ),
-      home: MyHomePage(), // Substitua por sua tela inicial
+      home: MyHomePage(), // Home screen with navigation drawer
     );
-    routes: <String, Widget>{
-  '/': MyHomePage(), // Tela inicial
-  '/projects': ProjectsScreen(), // Tela de projetos
-},
-
+    // Removed routes as navigation is handled by drawer
   }
 }
 
@@ -34,57 +31,75 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Paula VersaTech'), // Substitua por um título real
+        title: Text('Paula VersaTech'), // Substituted with a real title
       ),
-      body: Center(
-  child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      Text(
-        'Bem-vindo ao meu Portfolio!',
-        style: TextStyle(fontSize: 24),
-      ),
-      SizedBox(height: 20),
-      RichText( // Usamos RichText para formatar links
-        text: TextSpan(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
           children: [
-            TextSpan(
-              text: 'Conheça meus projetos: ',
-              style: TextStyle(fontSize: 16),
-            ),
-            TextSpan(
-              text: 'GitHub', // Texto do link
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue, // Cor do link
+            DrawerHeader(
+              child: Text(Paula Masson Marangon'),
+              decoration: BoxDecoration(
+                color: Colors.blue,
               ),
-              recognizer: UrlLauncher.launch('https://github.com/pmarangon'), // Função para abrir o link
             ),
-            TextSpan(
-              text: '\n', // Quebra de linha
-              style: TextStyle(fontSize: 16),
+            ListTile(
+              title: Text('Sobre Mim'),
+              onTap: () => Navigator.pushNamed(context, '/about_me_screen.dart'),
             ),
-            TextSpan(
-              text: 'Entre em contato: ',
-              style: TextStyle(fontSize: 16),
-            ),
-            TextSpan(
-              text: 'LinkedIn', // Texto do link
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue, // Cor do link
-              ),
-              recognizer: UrlLauncher.launch('https://www.linkedin.com/in/paulammarangon'), // Função para abrir o link
+            ListTile(
+              title: Text('Projetos'),
+              onTap: () => Navigator.pushNamed(context, '/projects_screen.dart'),
             ),
           ],
         ),
       ),
-    ],
-  ),
-),
-, // Substitua por widgets
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Bem-vindo ao meu Portfolio!',
+              style: TextStyle(fontSize: 24),
+            ),
+            SizedBox(height: 20),
+            RichText(
+              text: TextSpan(
+                children: [
+                  TextSpan(
+                    text: 'Conheça meus projetos: ',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text: 'GitHub',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    recognizer: UrlLauncher.launch('https://github.com/pmarangon'),
+                  ),
+                  TextSpan(
+                    text: '\n', // Newline
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text: 'Entre em contato: ',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  TextSpan(
+                    text: 'LinkedIn',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue,
+                    ),
+                    recognizer: UrlLauncher.launch('https://www.linkedin.com/in/paulammarangon'),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
